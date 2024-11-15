@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Itinerary Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Personalized Travel Itinerary Generator</h1>
+    <form id="itinerary-form">
+      <label for="destination">Destination:</label>
+      <input type="text" id="destination" name="destination" placeholder="e.g., Paris" required>
+
+      <label for="start-date">Start Date:</label>
+      <input type="date" id="start-date" name="start-date" required>
+
+      <label for="end-date">End Date:</label>
+      <input type="date" id="end-date" name="end-date" required>
+
+      <label for="preferences">Preferences:</label>
+      <select id="preferences" name="preferences">
+        <option value="adventure">Adventure</option>
+        <option value="relaxation">Relaxation</option>
+        <option value="food">Food</option>
+        <option value="history">History</option>
+      </select>
+
+      <button type="submit">Generate Itinerary</button>
+    </form>
+
+    <div id="itinerary-output" class="output"></div>
+
+    <button id="download-btn" style="display: none;">Download Itinerary as PDF</button>
+  </div>
+
+  <script src="jsPDF.bundle.js"></script> <!-- For PDF Export -->
+  <script src="app.js"></script>
+</body>
+</html>
